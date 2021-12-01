@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const response = await memberService.getAllMembers()
   return {
     props: {
-      externalPostData: response.data,
+      externalPostData: response.data || [],
     },
   }
 }
