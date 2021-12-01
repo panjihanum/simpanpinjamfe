@@ -1,6 +1,5 @@
 import MaterialTable from 'material-table'
 import Head from 'next/head'
-import { resetServerContext } from "react-beautiful-dnd";
 import { useEffect, useState } from 'react';
 import tableIcons from 'assets/icons/MaterialTableIcons';
 import { useRouter } from 'next/dist/client/router';
@@ -15,7 +14,6 @@ import { GetServerSidePropsContext } from 'next';
 export async function getServerSideProps({ query }: GetServerSidePropsContext) {
     const { id } = query
     const response = await historyTransactionService.getHistoryTransaction(id)
-    resetServerContext();
     return {
         props: {
             externalPostData: response.data,
