@@ -1,7 +1,7 @@
 const convertToRupiah: any = (angka: Number): String => {
   let angkaRev: String = new String()
   let angkaRev2: String = new String()
-  let i: Number = new Number()
+  let i: number = 0
 
   angkaRev = angka.toString().split('').reverse().join('')
   for (i = 0; i < angkaRev.length; i++)
