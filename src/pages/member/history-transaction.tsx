@@ -50,7 +50,7 @@ const HistoryTransaction: React.FC = (props) => {
         { title: "Tanggal Transaksi", field: "createdAt" },
     ]
 
-    const handlePress = (_, rowData: any) => {
+    const handlePress = () => {
         setModal(true)
     }
 
